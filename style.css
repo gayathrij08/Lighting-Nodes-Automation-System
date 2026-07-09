@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #111827;
+}
+.app-shell { padding: 24px; }
+.hero {
+  display: flex; justify-content: space-between; align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white; border-radius: 20px; padding: 24px 28px; box-shadow: 0 16px 40px rgba(30, 58, 138, .18);
+}
+.hero h1 { margin: 0 0 6px; font-size: 1.7rem; }
+.hero p { margin: 0; opacity: .9; }
+.hero-meta { text-align: right; font-weight: 600; }
+.dashboard-grid {
+  display: grid; gap: 16px; grid-template-columns: 1.1fr .9fr; margin-top: 18px;
+}
+.card {
+  background: white; border-radius: 18px; padding: 18px 20px; box-shadow: 0 10px 24px rgba(15, 23, 42, .06);
+}
+.card h2 { margin-top: 0; color: #1e3a8a; font-size: 1.1rem; }
+.control-row, .button-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+button, input[type="date"] {
+  border: none; border-radius: 12px; padding: 10px 12px; font: inherit;
+}
+button { background: #2563eb; color: white; cursor: pointer; }
+button.secondary { background: #6b7280; }
+.info-list > div, .insight-box { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
+.info-list > div:last-child, .insight-box:last-child { border-bottom: none; }
+.insight-grid { display: grid; gap: 10px; }
+.pole-status { font-size: 1.15rem; font-weight: 700; padding: 14px 0; }
+.pole-status.active { color: #22c55e; }
+.pole-status.inactive { color: #ef4444; }
+.calendar-panel { margin-top: 12px; }
+.calendar-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.calendar-grid { display:grid; grid-template-columns: repeat(7, 1fr); gap:6px; }
+.calendar-grid button { background:#e5e7eb; color:#111827; padding:8px; }
+.calendar-grid .holiday { background:#ef4444; color:white; }
+.calendar-grid .odd { background:#22c55e; color:white; }
+.calendar-grid .even { background:#2563eb; color:white; }
+.calendar-grid .selected { outline: 2px solid #111827; outline-offset: 2px; }
+.calendar-grid .today { box-shadow: inset 0 0 0 2px #6b7280; }
+@media (max-width: 900px) { .dashboard-grid { grid-template-columns: 1fr; } .hero { flex-direction: column; align-items:flex-start; gap:10px; } }

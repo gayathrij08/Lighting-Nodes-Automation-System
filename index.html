@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Street Light Automation System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <h1>🚦 Smart Street Light Automation System</h1>
+        <p>Professional automation dashboard with automatic government holiday handling.</p>
+      </div>
+      <div class="hero-meta">
+        <div id="currentDate">--</div>
+        <div id="currentTime">--</div>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="card control-card">
+        <h2>Control Panel</h2>
+        <div class="control-row">
+          <label for="dateInput">Select Date</label>
+          <input type="date" id="dateInput" />
+        </div>
+        <div class="button-row">
+          <button id="simulateBtn">Simulate</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+        <div class="calendar-panel">
+          <div class="calendar-header">
+            <button id="prevMonth">←</button>
+            <div id="calendarTitle">Month</div>
+            <button id="nextMonth">→</button>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+      </section>
+
+      <section class="card info-card">
+        <h2>System Information</h2>
+        <div class="info-list">
+          <div><span>Selected Date</span><strong id="selectedDate">--</strong></div>
+          <div><span>Day Name</span><strong id="dayName">--</strong></div>
+          <div><span>Government Holiday</span><strong id="holidayStatus">--</strong></div>
+          <div><span>Current Pattern</span><strong id="patternLabel">--</strong></div>
+          <div><span>Pattern Shift Count</span><strong id="patternShiftCount">--</strong></div>
+          <div><span>Lights ON</span><strong id="lightsOn">--</strong></div>
+          <div><span>Lights OFF</span><strong id="lightsOff">--</strong></div>
+          <div><span>Energy Saved</span><strong id="energySaved">--</strong></div>
+          <div><span>System Status</span><strong id="systemStatus">--</strong></div>
+        </div>
+      </section>
+
+      <section class="card insights-card">
+        <h2>Holiday Insights</h2>
+        <div class="insight-grid">
+          <div class="insight-box">
+            <span>Previous Government Holiday</span>
+            <strong id="prevHoliday">--</strong>
+          </div>
+          <div class="insight-box">
+            <span>Next Government Holiday</span>
+            <strong id="nextHoliday">--</strong>
+          </div>
+          <div class="insight-box">
+            <span>Days Remaining</span>
+            <strong id="daysRemaining">--</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card status-card">
+        <h2>Street Light Status</h2>
+        <div id="activePoles" class="pole-status active">Active Poles : --</div>
+        <div id="inactivePoles" class="pole-status inactive">Inactive Poles : --</div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
